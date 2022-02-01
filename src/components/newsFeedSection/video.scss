@@ -1,0 +1,44 @@
+@import 'src/styles/index';
+@import './mixins';
+
+.video {
+    @include card;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        padding-bottom: 100%;
+        position: relative;
+
+        &__player {
+            height: 100%;
+            min-width: 100%;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        &__play-btn {
+            background-color: $color-transparent;
+            border: 0;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            height: 60px;
+            padding: 0;
+            position: absolute;
+            top: 45%;
+            width: 60px;
+
+            &__img {
+                align-self: center;
+                height: 70px;
+                transform: translateX(-8%);
+                width: 70px;
+            }
+        }
+    }
+}

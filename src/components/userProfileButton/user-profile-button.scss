@@ -1,0 +1,21 @@
+@import 'src/styles/index';
+
+.user-profile-button {
+    background-color: $color-transparent;
+    border: 0;
+    position: relative;
+
+    &__image {
+        border-radius: 50%;
+        cursor: pointer;
+        height: 40px;
+        object-fit: cover;
+        width: 40px;
+    }
+
+    &__icon {
+        bottom: 5px;
+        position: absolute;
+        right: 0;
+    }
+}

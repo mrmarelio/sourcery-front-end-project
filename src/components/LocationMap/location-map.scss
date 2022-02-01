@@ -1,0 +1,17 @@
+@import 'src/styles/index';
+
+.location-map {
+    h2 {
+        margin: 0 0 24px;
+    }
+
+    &__map-holder {
+        height: 411px;
+    }
+}
+
+.map {
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    height: 100%;
+}

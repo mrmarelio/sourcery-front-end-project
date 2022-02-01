@@ -1,0 +1,38 @@
+@import 'src/styles/index';
+@import './mixins';
+
+.post-card-top {
+    box-sizing: border-box;
+    display: flex;
+    font-size: $text-font-size;
+    height: 48px;
+    justify-content: space-between;
+    padding: 16px;
+
+    &__left {
+        align-items: center;
+        display: flex;
+
+        &__img {
+            border-radius: 50%;
+            height: 25px;
+            margin-right: 12px;
+            object-fit: cover;
+            width: 25px;
+        }
+    }
+
+    &__name {
+        color: $color-midnight;
+        text-transform: uppercase;
+    }
+
+    &__right {
+        color: $color-slate-gray;
+        font-family: $font-roboto-medium;
+
+        &__loc {
+            padding-right: 8px;
+        }
+    }
+}

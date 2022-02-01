@@ -1,0 +1,35 @@
+@import 'src/styles/index';
+
+.eatout {
+    &__breadcrumbs {
+        margin-left: $spacing-desktop;
+
+        @media (max-width: 500px) {
+            margin-left: $spacing-mobile;
+        }
+    }
+
+    &__title {
+        font-family: $font-roboto-heavy;
+        font-size: $h1-font-size;
+        margin-bottom: 72px;
+        margin-left: $spacing-desktop;
+        margin-right: $spacing-desktop;
+        margin-top: 0;
+
+        @media (max-width: 500px) {
+            margin-left: $spacing-mobile;
+            margin-right: $spacing-mobile;
+        }
+    }
+
+    &__wrapper {
+        margin-left: $spacing-desktop;
+        margin-right: $spacing-desktop;
+
+        @media (max-width: 500px) {
+            margin-left: $spacing-mobile;
+            margin-right: $spacing-mobile;
+        }
+    }
+}

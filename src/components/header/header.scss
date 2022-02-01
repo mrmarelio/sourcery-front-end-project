@@ -1,0 +1,50 @@
+@import 'src/styles/index';
+
+.header {
+    $_index-value-header: 3;
+
+    &__main {
+        align-items: center;
+        background: $color-electric-violet;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        height: 80px;
+        justify-content: space-between;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        z-index: $_index-value-header;
+    }
+
+    &-left {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        padding-left: 48px;
+
+        @media (max-width: 500px) {
+            padding-left: $spacing-mobile;
+        }
+    }
+
+    &-middle {
+        align-items: center;
+        display: flex;
+    }
+
+    &-right {
+        display: flex;
+
+        &_bell {
+            padding: 27px 24px 26px 0;
+        }
+
+        &_profile {
+            padding: 20px 48px 20px 0;
+
+            @media (max-width: 500px) {
+                padding: 20px $spacing-mobile 20px 0;
+            }
+        }
+    }
+}

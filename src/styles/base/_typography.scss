@@ -1,0 +1,71 @@
+$roboto-regular: 'roboto-regular';
+$roboto-medium: 'roboto-medium';
+$roboto-bold: 'roboto-bold';
+$roboto-black: 'roboto-black';
+$roboto-light: 'roboto-light';
+
+@font-face {
+    font-family: $roboto-regular;
+    src: url('../../assets/roboto-fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: $roboto-medium;
+    src: url('../../assets/roboto-fonts/Roboto-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: $roboto-bold;
+    src: url('../../assets/roboto-fonts/Roboto-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: $roboto-black;
+    src: url('../../assets/roboto-fonts/Roboto-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: $roboto-light;
+    src: url('../../assets/roboto-fonts/Roboto-Light.ttf') format('truetype');
+}
+
+$font-roboto-regular: $roboto-regular, sans-serif;
+$font-roboto-medium: $roboto-medium, sans-serif;
+$font-roboto-bold: $roboto-bold, sans-serif;
+$font-roboto-heavy: $roboto-black, sans-serif;
+$font-roboto-light: $roboto-light, sans-serif;
+
+$footer-font-size: 10px;
+$button-font-size: 14px;
+$medium-button-font-size: 24px;
+$time-font-size: 10px;
+$restaurant-title-font-size: 48px;
+
+$h1-font-size: 36px;
+$h2-font-size: 32px;
+$h2-font-size-alt: 24px;
+$h3-font-size: 24px;
+$h3-font-size-alt: 20px;
+$h4-font-size: 20px;
+$h4-font-size-alt: 16px;
+$h5-font-size: 18px;
+$body-font-size: 16px;
+$body2-font-size: 14px;
+$body3-font-size: 12px;
+$caption-font-size: 14px;
+$tiny-font-size: 10px;
+
+.h2-alt-font {
+    font-family: $font-roboto-heavy;
+    font-size: $h2-font-size-alt;
+    line-height: 32px;
+}
+
+.body-font {
+    font-family: $font-roboto-regular;
+    font-size: $body-font-size;
+    line-height: 24px;
+}
+
+.caption {
+    font-family: $font-roboto-regular;
+    font-size: $caption-font-size;
+    line-height: 16px;
+}

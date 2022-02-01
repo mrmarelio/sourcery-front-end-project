@@ -1,0 +1,18 @@
+@import 'src/styles/index';
+
+.reservations {
+    &__breadcrumbs {
+        margin-left: $spacing-desktop;
+
+        @media (max-width: 500px) {
+            margin-left: $spacing-mobile;
+        }
+    }
+
+    &__different-reservations {
+        .reservation-header {
+            font-size: $h1-font-size;
+            line-height: 44px;
+        }
+    }
+}

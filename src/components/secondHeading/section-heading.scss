@@ -1,0 +1,21 @@
+@import 'src/styles/index';
+
+.section-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 48px 24px;
+
+    &__title {
+        color: $color-fiord;
+        font-family: $font-roboto-medium;
+        font-size: $medium-button-font-size;
+        font-weight: 900;
+        line-height: 32px;
+        margin: 0;
+    }
+
+    @media (max-width: 500px) {
+        padding: 0 $spacing-mobile 24px;
+    }
+}

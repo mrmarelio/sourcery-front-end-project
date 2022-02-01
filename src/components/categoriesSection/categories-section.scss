@@ -1,0 +1,18 @@
+@import 'src/styles/index';
+
+.category-section {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    height: 100%;
+    margin-bottom: 48px;
+    row-gap: 0;
+    width: 100%;
+
+    &__title {
+        color: $color-fiord;
+        font-family: $font-roboto-medium;
+        font-size: $medium-button-font-size;
+        margin-top: 72px;
+    }
+}

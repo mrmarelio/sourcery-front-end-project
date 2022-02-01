@@ -1,0 +1,58 @@
+@import 'src/styles/index';
+
+.registration {
+    background: $color-white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    max-width: 480px;
+    padding: 40px 32px;
+    position: relative;
+    width: 100%;
+
+    > svg {
+        height: 68px;
+        left: 50%;
+        position: absolute;
+        top: -140px;
+        transform: translateX(-50%);
+        width: 162px;
+    }
+
+    &__top-section {
+        .h2-alt-font {
+            margin: 0 0 8px;
+        }
+
+        .body-font {
+            margin: 0 0 16px;
+        }
+    }
+
+    &__input-holder {
+        column-gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        margin: 0 0 32px;
+        padding: 16px 0 0;
+        row-gap: 24px;
+    }
+
+    &__input-field-wrapper {
+        width: 100%;
+    }
+
+    &__input-field-wrapper--span-2 {
+        grid-column-start: span 2;
+    }
+
+    &__bottom-section {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        .body-font {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@import 'index';
+@import 'print';
+
+$swiper-order: 0;
+
+body {
+    background-color: $color-desert-storm;
+    color: $color-fiord;
+    margin: auto;
+    max-width: 1440px;
+    padding: 0;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-roboto-regular;
+
+    &__content {
+        @include content-margins;
+    }
+}
+
+a {
+    color: $color-electric-violet;
+    text-decoration: none;
+}
+
+.swiper-container {
+    box-sizing: border-box;
+    padding: 0 5px 15px;
+    z-index: $swiper-order;
+}

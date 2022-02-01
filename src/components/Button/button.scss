@@ -1,0 +1,84 @@
+@import 'src/styles/index';
+
+$height-large: 40px;
+$height-small: 32px;
+$font-size-large: 14px;
+$font-size-small: 12px;
+$border-radius: 65px;
+$text-color: #fff;
+$text-color-disabled: #9ea7b3;
+$text-color-outline: #007fa9;
+$border-color: #007fa9;
+$background-color: #6e44ff;
+$background-color-secondary: #5836cc;
+$background-color-active: #462ca3;
+$background-color-disabled: #c4cbdb;
+
+@mixin btn-styles {
+    align-items: center;
+    background: $background-color;
+    border: transparent;
+    border-radius: $border-radius;
+    color: $text-color;
+    cursor: pointer;
+    display: flex;
+    font-size: $font-size-large;
+    font-style: normal;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 24px;
+    padding: 8px 24px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:disabled {
+        background: $background-color-disabled;
+        color: $text-color-disabled;
+        cursor: initial;
+    }
+
+    &.small {
+        font-size: $font-size-small;
+        height: $height-small;
+    }
+
+    &.medium {
+        font-size: $font-size-small;
+        line-height: 18px;
+        padding: 7px 16px;
+    }
+
+    &.text {
+        background-color: $color-transparent;
+        color: $color-slate-gray;
+
+        &:hover:not(:disabled) {
+            background-color: $color-transparent;
+            color: $color-fiord;
+
+            &:active {
+                background-color: $color-transparent;
+                color: $color-midnight;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.btn {
+    @include btn-styles;
+
+    &:hover:not(:disabled) {
+        background-color: $background-color-secondary;
+
+        &:active {
+            background-color: $background-color-active;
+        }
+    }
+
+    svg {
+        height: 16px;
+        margin: 0 7px 0 0;
+        width: 16px;
+    }
+}

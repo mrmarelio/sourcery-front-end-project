@@ -1,0 +1,26 @@
+@import 'src/styles/index';
+
+.rooms-reservations-page {
+    margin: 0 $spacing-desktop;
+
+    &__filters-and-center {
+        display: grid;
+        grid-column-gap: 40px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__filters {
+        display: grid;
+        gap: 40px;
+        grid-column: 1/2;
+        width: 286px;
+    }
+
+    &__center {
+        grid-column: 2/3;
+    }
+
+    &__center-image {
+        height: 500px;
+    }
+}

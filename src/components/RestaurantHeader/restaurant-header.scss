@@ -1,0 +1,153 @@
+@import 'src/styles/index';
+
+.restaurant-header {
+    &__image,
+    &__mask-image {
+        height: 540px;
+        left: 0;
+        margin: 0 0 0 -#{$spacing-desktop};
+        object-fit: cover;
+        position: absolute;
+        width: calc(100% + (2 * #{$spacing-desktop}));
+
+        @media only screen and (max-width: 850px) {
+            height: 400px;
+        }
+
+        @media only screen and (max-width: 650px) {
+            height: 400px;
+        }
+
+        @media only screen and (max-width: 500px) {
+            height: 400px;
+            margin: 0 0 0 -#{$spacing-mobile};
+            width: calc(100% + (2 * #{$spacing-mobile}));
+        }
+    }
+
+    &__image {
+        opacity: 0.7;
+    }
+
+    &__mask-image {
+        background: linear-gradient(
+            to right,
+            $color-desert-storm 0%,
+            rgba(246, 247, 248, 0) 51.1%,
+            $color-desert-storm 100%
+        );
+    }
+
+    &__text {
+        align-items: flex-end;
+        display: flex;
+        height: 570px;
+        position: relative;
+
+        @media only screen and (max-width: 850px) {
+            height: 400px;
+        }
+
+        @media only screen and (max-width: 650) {
+            align-items: center;
+        }
+    }
+
+    &__categories {
+        display: inline-flex;
+        flex-direction: row;
+        margin: 0 0 12px;
+    }
+
+    &__category-tag {
+        background-color: $color-midnight;
+        border-radius: 8px;
+        color: $color-white;
+        font-family: $roboto-regular;
+        font-size: $body3-font-size;
+        line-height: 16px;
+        margin: 0 12px 0 0;
+        padding: 6px 12px;
+    }
+
+    &__title {
+        color: $color-midnight;
+        font-family: $roboto-bold;
+        font-size: $restaurant-title-font-size;
+        line-height: 56px;
+        margin: 0 0 108px;
+
+        @media only screen and (max-width: 650px) {
+            margin: 0 0 150px;
+        }
+
+        @media only screen and (max-width: 500px) {
+            font-size: $h1-font-size;
+        }
+    }
+
+    &__action-bar {
+        align-items: center;
+        background-color: $color-desert-storm;
+        border-radius: 5px;
+        bottom: 0;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        height: 60px;
+        justify-content: space-between;
+        padding: 0 16px;
+        position: absolute;
+        width: 100%;
+
+        @media only screen and (max-width: 650px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: auto;
+            justify-content: center;
+            padding: 16px;
+        }
+    }
+
+    &__action-bar-icons,
+    &__action-bar-buttons {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__action-bar-icons,
+    &__action-bar-text {
+        @media only screen and (max-width: 650px) {
+            margin: 0 0 16px;
+        }
+    }
+
+    &__action-bar-like {
+        height: 34px;
+        padding: 0 17px;
+
+        svg {
+            cursor: pointer;
+            height: 34px;
+            stroke: $color-fiord;
+            width: 34px;
+
+            &:hover {
+                fill: $color-error-red;
+            }
+
+            &:active {
+                fill: $color-error-red;
+                stroke: $color-error-red;
+            }
+        }
+    }
+
+    &__action-bar-text {
+        font-family: $roboto-bold;
+        font-size: $caption-font-size;
+        text-transform: uppercase;
+    }
+}

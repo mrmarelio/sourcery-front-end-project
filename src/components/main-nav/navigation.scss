@@ -1,0 +1,76 @@
+@import 'src/styles/index';
+
+$color-navigation-hover: rgba(0, 0, 0, 0.05);
+$color-opened-page: rgba(0, 0, 0, 0.12);
+
+.navigation {
+    align-items: center;
+    background-color: $color-electric-violet;
+    display: flex;
+    height: 80px;
+    width: 100%;
+
+    &__burger-menu {
+        display: none;
+
+        @media (max-width: 800px) {
+            display: flex;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        margin-right: 15px;
+    }
+
+    &__items {
+        display: flex;
+        height: 100%;
+        margin: auto;
+        padding-inline-start: 0;
+
+        @media (max-width: 800px) {
+            display: none;
+        }
+    }
+
+    &__item {
+        list-style-type: none;
+
+        @media (max-width: 800px) {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    &__link {
+        align-items: center;
+        color: $color-desert-storm;
+        display: flex;
+        height: 100%;
+        line-height: 24px;
+        padding: 0 24px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $color-navigation-hover;
+            cursor: pointer;
+        }
+
+        &-active {
+            background-color: $color-opened-page;
+
+            &:hover {
+                background-color: $color-opened-page;
+            }
+        }
+
+        @media (max-width: 800px) {
+            display: flex;
+            justify-content: center;
+            padding: $spacing-mobile 48px;
+            width: 100%;
+        }
+    }
+}

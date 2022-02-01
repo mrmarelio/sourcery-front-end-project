@@ -1,0 +1,72 @@
+@import 'src/styles/index';
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.notification {
+    align-items: center;
+    animation: fadeIn 0.5s;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: $color-fiord;
+    display: flex;
+    height: $spacing-desktop;
+    padding: 16px;
+    width: 343px;
+
+    &--full-width {
+        width: 100%;
+    }
+
+    &--success {
+        background-color: $color-magic-mint;
+    }
+
+    &--info {
+        background-color: $color-malibu;
+    }
+
+    &--warning {
+        background-color: $color-energy-yellow;
+    }
+
+    &--error {
+        background-color: $color-error-red;
+        color: $color-white;
+    }
+
+    &__text {
+        font-family: $font-roboto-medium;
+        font-size: $body2-font-size;
+        justify-self: flex-start;
+        margin: 0 10px;
+        width: 100%;
+    }
+
+    &__button {
+        align-items: center;
+        background-color: $color-transparent;
+        border: 0;
+        cursor: pointer;
+        display: flex;
+        height: 16px;
+        justify-content: center;
+        width: 16px;
+    }
+
+    @media (max-width: 470px) {
+        height: 100%;
+        width: 100%;
+
+        &__text {
+            overflow-wrap: break-word;
+        }
+    }
+}

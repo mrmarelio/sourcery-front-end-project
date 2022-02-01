@@ -1,0 +1,32 @@
+@import 'src/styles/index';
+
+.footer {
+    $_index-value-footer: 2;
+
+    align-items: center;
+    background: $color-white;
+    bottom: 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    height: 72px;
+    justify-content: flex-end;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: $_index-value-footer;
+
+    &-copyright {
+        color: $color-fiord;
+        font-size: $footer-font-size;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding: 29px 48px 28px 0;
+        text-align: right;
+        text-transform: uppercase;
+
+        @media (max-width: 500px) {
+            padding: 29px $spacing-mobile 28px 0;
+        }
+    }
+}

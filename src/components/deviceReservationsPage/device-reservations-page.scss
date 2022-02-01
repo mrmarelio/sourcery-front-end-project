@@ -1,0 +1,56 @@
+@import 'src/styles/index';
+
+.device-reservations-page {
+    margin: 0 $spacing-desktop;
+
+    &__filters-and-cards {
+        display: grid;
+        grid-column-gap: 40px;
+        grid-row-gap: 26px;
+        grid-template-columns: 1fr 4fr;
+    }
+
+    &__filters {
+        display: grid;
+        gap: 40px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        max-height: 1000px;
+        width: 100%;
+    }
+
+    &__cards {
+        display: grid;
+        grid-auto-rows: minmax(min-content, max-content);
+        grid-column: 2/3;
+        grid-gap: 24px;
+        grid-row: 2/3;
+        height: auto;
+        max-height: 100%;
+        width: 100%;
+    }
+
+    &__results-checked-filters {
+        display: flex;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    &__results {
+        color: $color-black;
+        font-family: $font-roboto-medium;
+        font-size: $h3-font-size-alt;
+
+        &--search-text {
+            margin: 0 32px;
+        }
+    }
+
+    &__checked-filters {
+        display: flex;
+    }
+
+    @media (max-width: 500px) {
+        margin: 0 $spacing-mobile;
+    }
+}

@@ -1,0 +1,57 @@
+@import 'src/styles/index';
+@import './mixins';
+
+.comments-section {
+    box-sizing: border-box;
+    padding: 0 16px;
+    width: 100%;
+
+    &__buttons {
+        @include card-buttons;
+        display: flex;
+        padding: 16px 0;
+        padding-left: 2px;
+    }
+
+    &__bottom {
+        align-items: center;
+        display: flex;
+        height: 48px;
+
+        &__img {
+            border-radius: 50%;
+            height: 24px;
+            object-fit: cover;
+            width: 24px;
+        }
+
+        &__comment-input {
+            background-color: $color-transparent;
+            border: 0;
+            color: $color-gray-chateau;
+            font-family: $font-roboto-regular;
+            font-size: $body3-font-size;
+            height: 14px;
+            overflow: hidden;
+            padding: 0 12px;
+            resize: none;
+            width: 100%;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder {
+                color: $color-gray-chateau;
+            }
+        }
+
+        &__post-btn {
+            @include button-no-decor;
+            color: $color-slate-gray;
+            cursor: pointer;
+            font-family: $font-roboto-medium;
+            font-size: $text-font-size;
+        }
+    }
+}

@@ -1,0 +1,130 @@
+@import 'src/styles/index';
+$date-picker-font-size: 15px;
+
+.react-datepicker {
+    align-items: center;
+    background: $color-desert-storm;
+    border: 1px solid $color-ghost;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    width: 343px;
+
+    &__triangle {
+        margin-top: 0;
+    }
+
+    &__month-container {
+        width: 100%;
+    }
+
+    &__current-month {
+        align-items: center;
+        color: $color-fiord;
+        display: flex;
+        font-family: $font-roboto-regular;
+        font-size: $date-picker-font-size;
+        height: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &__day-name {
+        color: $color-fiord;
+        font-family: $font-roboto-medium;
+        font-size: $body3-font-size;
+        height: 32px;
+        margin: 5px;
+        width: 32px;
+    }
+
+    &__day-names {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    &__header {
+        background: $color-desert-storm;
+        border: 0;
+        overflow: hidden;
+        padding-top: 14px;
+        width: 100%;
+    }
+
+    &__month {
+        border: 0;
+        height: 100%;
+        margin: 0;
+        width: 100%;
+    }
+
+    &__navigation-icon::before {
+        border: 0;
+        content: '';
+    }
+
+    &__navigation-icon--next::before {
+        background-image: url('../../assets/icons/reservations-search-icons/search-date-right.svg');
+        height: 12px;
+        transform: rotate(0);
+        width: 6px;
+    }
+
+    &__navigation--previous {
+        margin-left: 16px;
+        margin-top: 6px;
+    }
+
+    &__navigation--next {
+        margin-right: 16px;
+        margin-top: 6px;
+    }
+
+    &__navigation-icon--previous::before {
+        background-image: url('../../assets/icons/reservations-search-icons/search-date-left.svg');
+        height: 12px;
+        transform: rotate(0);
+        width: 6px;
+    }
+
+    &__week {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__day {
+        align-items: center;
+        color: $color-fiord;
+        display: flex;
+        font-family: $font-roboto-regular;
+        font-size: $body3-font-size;
+        height: 32px;
+        justify-content: center;
+        margin: 5px;
+        width: 32px;
+
+        &--today {
+            background: $color-iron;
+            border-radius: 50px;
+            font-weight: normal;
+        }
+
+        &--selected {
+            background: $color-fiord;
+            border-radius: 50px;
+            color: $color-white;
+        }
+
+        &--outside-month {
+            color: $color-gray-chateau;
+        }
+
+        &:hover {
+            background: $color-porcelain;
+            border-radius: 50px;
+            color: $color-fiord;
+        }
+    }
+}

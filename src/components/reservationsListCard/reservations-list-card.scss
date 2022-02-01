@@ -1,0 +1,133 @@
+@import 'src/styles/index';
+
+.reservations-list-card {
+    background-color: $color-white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    display: grid;
+    font-family: $roboto-regular;
+    grid-template-columns: 132px 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 0.2fr;
+    max-height: 160px;
+    transition: 0.1s;
+    width: 100%;
+
+    &:hover {
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    &__brand {
+        align-self: flex-start;
+        color: $color-slate-gray;
+        display: flex;
+        font-family: $roboto-medium;
+        font-size: $body3-font-size;
+        font-weight: 500;
+        line-height: 18px;
+        padding-top: 16px;
+        text-transform: uppercase;
+    }
+
+    &__name-wrapper {
+        display: block;
+        grid-column: 2 / span 2;
+        grid-row: 2;
+        margin-right: 18px;
+
+        &__name {
+            color: $color-midnight;
+            font-family: $font-roboto-medium;
+            font-size: $medium-button-font-size;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            line-height: 28px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    &__availability {
+        align-self: flex-start;
+        color: $color-fiord;
+        display: flex;
+        font-family: $roboto-bold;
+        font-size: $body3-font-size;
+        font-weight: 500;
+        grid-column-end: 4;
+        grid-column-start: 2;
+        line-height: 18px;
+        margin-top: -6px;
+        text-transform: uppercase;
+    }
+
+    &__quantity {
+        align-self: flex-end;
+        color: $color-slate-gray;
+        display: flex;
+        font-family: $roboto-medium;
+        font-size: $body3-font-size;
+        font-weight: 500;
+        grid-column: 2;
+        grid-row: 4 / span 2;
+        line-height: 18px;
+        padding-bottom: 18px;
+    }
+
+    &__image-wrapper {
+        grid-row: span 5;
+
+        &__image {
+            display: block;
+            grid-row: span 5;
+            height: 128px;
+            object-fit: scale-down;
+            padding: 16px 0;
+            width: 100%;
+        }
+    }
+
+    &__icon {
+        align-items: flex-start;
+        display: flex;
+        justify-content: flex-end;
+        padding: 19px 18px 0 0;
+        stroke: $color-fiord;
+    }
+
+    &__buttons {
+        align-items: flex-end;
+        display: flex;
+        grid-column: 3;
+        grid-row: 4 / span 2;
+        justify-content: flex-end;
+        padding: 0 16px 18px 0;
+
+        button:nth-child(2) {
+            margin-left: 8px;
+        }
+    }
+
+    &__rating {
+        align-items: center;
+        background-color: $color-energy-yellow;
+        border-radius: 8px;
+        color: $color-pickled-bluewood;
+        display: flex;
+        font-family: $roboto-regular;
+        font-size: $button-font-size;
+        font-weight: 700;
+        grid-column: 2;
+        grid-row: 4 / span 2;
+        height: 16px;
+        justify-content: center;
+        margin-bottom: 16px;
+        padding: 8px 12px;
+        width: 40px;
+
+        span {
+            padding-left: 8px;
+        }
+    }
+}

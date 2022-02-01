@@ -1,0 +1,26 @@
+.similar-restaurants {
+    margin: -17px;
+    overflow: hidden;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px 24px 17px;
+    }
+
+    &__grid {
+        display: grid;
+        gap: 50px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .swiper-container {
+        overflow: visible;
+        padding: 17px;
+    }
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}

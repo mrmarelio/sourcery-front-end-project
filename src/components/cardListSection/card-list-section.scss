@@ -1,0 +1,55 @@
+@import 'src/styles/index';
+
+.device-list-section {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    width: 100%;
+
+    &__search-summary {
+        color: $color-black;
+        font-family: $font-roboto-medium;
+        font-size: $h4-font-size;
+        font-weight: 500;
+        line-height: 24px;
+        width: 100%;
+    }
+
+    &__pagination {
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        width: 100%;
+
+        .disabled {
+            visibility: hidden;
+        }
+
+        a {
+            background-color: $color-white;
+            border: 1px solid $color-ghost;
+            border-radius: 5px;
+            color: $color-fiord;
+            cursor: pointer;
+            font-family: $font-roboto-medium;
+            font-size: $caption-font-size;
+            line-height: 24px;
+            margin-right: 16px;
+            padding: 6px 12px;
+        }
+
+        &--active {
+            a {
+                background-color: $color-electric-violet;
+                color: $color-white;
+            }
+        }
+
+        a:hover {
+            background-color: $color-electric-violet;
+            color: $color-white;
+        }
+    }
+}

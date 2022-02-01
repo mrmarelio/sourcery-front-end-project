@@ -1,0 +1,62 @@
+@import 'src/styles/index';
+
+$spacing-16: 16px;
+$spacing-17: 17px;
+
+.review-card {
+    background-color: $color-white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    margin: 0 0 $spacing-16;
+    // max-width: 592px;
+    padding: 20px $spacing-17;
+    position: relative;
+    width: calc(100% - (2 * #{$spacing-17}));
+
+    @media only screen and (max-width: 1000px) {
+        margin: 0 $spacing-16 $spacing-16 0;
+        width: calc(50% - (2 * #{$spacing-17}) - #{$spacing-16});
+
+        &:nth-child(even) {
+            margin: 0 0 $spacing-16;
+        }
+    }
+
+    @media only screen and (max-width: 650px) {
+        margin: 0 0 $spacing-16;
+        width: 100%;
+    }
+
+    &__user-name {
+        color: $color-midnight;
+        font-family: $font-roboto-bold;
+        font-size: $caption-font-size;
+        line-height: 16px;
+        margin: 0 0 8px;
+        text-transform: uppercase;
+    }
+
+    &__comment {
+        font-size: $body2-font-size;
+        line-height: 21px;
+    }
+
+    &__rating {
+        align-items: center;
+        background-color: $color-energy-yellow;
+        border-radius: 0 8px;
+        color: $color-pickled-bluewood;
+        display: flex;
+        font-family: $roboto-regular;
+        font-size: $button-font-size;
+        font-weight: 700;
+        padding: 8px 12px;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        svg {
+            margin: 0 8px 0 0;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@import 'src/styles/index';
+
+.rating {
+    align-content: center;
+    align-items: center;
+    background-color: $color-energy-yellow;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: $color-pickled-bluewood;
+    cursor: pointer;
+    display: flex;
+    font-family: $roboto-black;
+    font-size: $button-font-size;
+    font-weight: 700;
+    height: 32px;
+    justify-content: space-between;
+    padding: 8px 10px;
+    text-align: center;
+    transition: width 0.4s;
+    width: 65px;
+
+    &:hover {
+        width: 175px;
+    }
+
+    svg {
+        height: 14px;
+        margin: 0;
+        padding: 0;
+        stroke: $color-fiord;
+        width: 14px;
+    }
+
+    &--base-star-filled {
+        fill: $color-fiord;
+    }
+
+    &__expanded {
+        display: flex;
+        transition: width 0.5s;
+        width: 0;
+
+        &:hover {
+            width: 30px;
+        }
+
+        button {
+            background-color: $color-transparent;
+            border: 0;
+            cursor: pointer;
+            margin: 0;
+            outline: none;
+        }
+
+        .on {
+            svg {
+                fill: $color-fiord;
+            }
+        }
+
+        .off {
+            svg {
+                fill: $color-transparent;
+            }
+        }
+    }
+}

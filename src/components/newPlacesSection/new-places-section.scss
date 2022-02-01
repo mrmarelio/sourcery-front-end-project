@@ -1,0 +1,30 @@
+@import 'src/styles/index';
+
+.new-places-section {
+    box-sizing: border-box;
+    margin: 0 48px;
+
+    &__restaurants {
+        box-sizing: border-box;
+        column-gap: 50px;
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        justify-items: stretch;
+        justify-self: center;
+        row-gap: 40px;
+        width: 100%;
+
+        @media only screen and (max-width: 900px) {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 500px) {
+        margin: 0 $spacing-mobile;
+    }
+}

@@ -1,0 +1,74 @@
+@import 'src/styles/index';
+$z-index-1: 1;
+
+.restaurant {
+    box-sizing: border-box;
+    padding: 0 $spacing-desktop;
+    position: relative;
+    width: 100%;
+
+    &__breadcrumbs {
+        @include restaurant-breadcrumbs-colors;
+        margin-top: 24px;
+        position: absolute;
+        z-index: $z-index-1;
+    }
+
+    &__header-wrapper {
+        height: 570px;
+        margin: -48px 0 $spacing-desktop;
+        position: relative;
+        width: 100%;
+
+        @media only screen and (max-width: 850px) {
+            height: 400px;
+        }
+    }
+
+    &__mid-section {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 48px;
+        grid-template-columns: minmax(auto, 1314px) minmax(auto, 592px);
+        grid-template-rows: 223px 467px;
+        margin: 0 0 72px;
+        width: 100%;
+
+        @media only screen and (max-width: 1000px) {
+            grid-template-columns: minmax(auto, 890px);
+            grid-template-rows: 223px 467px auto;
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: 650px) {
+            grid-template-rows: auto 467px auto;
+        }
+    }
+
+    &__information-wrapper {
+        height: 223px;
+        width: 100%;
+
+        @media only screen and (max-width: 650px) {
+            height: auto;
+        }
+    }
+
+    &__location-wrapper {
+        height: 467px;
+        width: 100%;
+    }
+
+    &__reviews-wrapper {
+        width: 100%;
+    }
+
+    &__suggestions-wrapper {
+        height: 533px;
+        width: 100%;
+    }
+
+    @media (max-width: 500px) {
+        padding: 0 $spacing-mobile;
+    }
+}

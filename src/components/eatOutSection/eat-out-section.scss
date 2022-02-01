@@ -1,0 +1,27 @@
+@import 'src/styles/index';
+
+.eat-out-section {
+    box-sizing: border-box;
+    column-gap: 50px;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    justify-items: stretch;
+    justify-self: center;
+    padding: 20px 48px;
+    padding-top: 95px;
+    row-gap: 40px;
+    width: 100%;
+
+    @media only screen and (max-width: 900px) {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    @media (max-width: 500px) {
+        padding: 95px $spacing-mobile 20px;
+    }
+}

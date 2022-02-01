@@ -1,0 +1,37 @@
+@import 'src/styles/index';
+
+$font-size-time: 100px;
+
+.hello-widget {
+    color: $color-fiord;
+    font-family: $roboto-bold;
+
+    &__time {
+        font-size: $font-size-time;
+    }
+
+    &__greeting {
+        font-size: $h1-font-size;
+        margin: 16px 0;
+    }
+
+    @media (max-width: 1000px) {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        &__greeting {
+            margin-left: 25px;
+        }
+    }
+
+    @media (max-width: 630px) {
+        display: flex;
+        flex-direction: column;
+
+        &__greeting {
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+}

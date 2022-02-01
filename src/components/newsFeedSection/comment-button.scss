@@ -1,0 +1,12 @@
+@import 'src/styles/index';
+@import './mixins';
+
+.comment-button {
+    @include button-layout;
+
+    &__btn {
+        @include button-no-decor;
+        @include button-align;
+        cursor: default;
+    }
+}

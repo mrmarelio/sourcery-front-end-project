@@ -1,0 +1,11 @@
+@import 'src/styles/index';
+@import './mixins';
+
+.wish-button {
+    @include button-layout;
+
+    &__btn {
+        @include button-align;
+        @include button-no-decor;
+    }
+}
